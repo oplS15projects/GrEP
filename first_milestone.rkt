@@ -46,6 +46,7 @@
 
 ;----------------------------------------------------------------------------
 ;Author: Emily Seto, Email: emily_seto@student.uml.edu
+
 ;Took inspiration from ps5b, exercise 2.57 from SICP:
 ;Define checks for variables, same variables, and numbers.
 (define (var? x) (symbol? x))
@@ -56,6 +57,8 @@
 (define (=number? exp num)
   (and (number? exp) (= exp num)))
 
+;----------------------------- IN-FIX NOTATION ------------------------------
+;For input values given in in-fix notation:
 ;Define checks for various arithmetic operations:
 (define (sum? x) (and (pair? x) (eq? (car x) '+)))
 (define (difference? x) (and (pair? x) (eq? (car x) '-)))
@@ -95,11 +98,20 @@
                  ((=number? m2 0) m1)
                  ((and (number? m1) (number? m2))
                   (* m1 m2))
-                 (else (list '* m1 m2))))
-         (else (append (list '* m1) (make-product multiplicand))))))
+                 (else (list '* m1 m2)))))
+         (else (append (list '* m1) (make-product multiplicand)))))
                  
                  
-(define (make-quotient d1 . dividend) 'z)
+(define (make-quotient d1 . dividend)
+  (cond ((= (length dividend) 0) d1)
+        ((= (length dividend) 1)
+         (let* ([d2 (car dividend)])
+           (cond ((=number? d1 0) d2)
+                 ((=number? d2 0) d1)
+                 ((and (number? d1) (number? d2))
+                  (/ d1 d2))
+                 (else (list '/ d1 d2)))))
+        (else (append (list '/ d1) (make-quotient dividend)))))
 
 (define (make-exponentiation x y)
   (cond ((= y 0) 1)
