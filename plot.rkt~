@@ -1,7 +1,9 @@
 #lang racket
-(require "gui.rkt"
-         racket/gui/base
-         plot)
+(require racket/gui/base)
+(require racket/include)
+(require plot)
+
+(include "gui.rkt")
 
 ;----------------------------------------------------------------------------
 ;Author: Michael Forsyth
