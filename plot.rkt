@@ -1,11 +1,9 @@
 #lang racket
-
 (require racket/gui/base)
 (require racket/include)
 (require plot)
 
 (include "gui.rkt")
-(include "gui_to_lot.rkt")
 
 ;----------------------------------------------------------------------------
 ;Author: Michael Forsyth
@@ -22,11 +20,11 @@
 
 ;func1 is going to be the text in the text box.
 ;Adjust func1 using a set! procedure.
-;(define func1(λ (x) (* 2 x)))
+(define func1(λ (x) (* 2 x)))
 
 ;func2 is regular function to plot with it.
 ;This is a case to compare.
-;(define func2 (λ (x) (* x x)))
+(define func2 (λ (x) (* x x)))
 
 
 ;Probably going to use set! to change the functions when a button is hit.
