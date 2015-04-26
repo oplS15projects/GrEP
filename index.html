@@ -30,10 +30,65 @@
 <p>Our project is called the Graph-ical Emulation Program (also known as GrEP). In our earlier discussions, we began thinking about how there needs to be a simpler way for individuals with non-technical backgrounds to utilize the capabilities of plotting mathematical functions. Our software will provide this solution.</p>
 
 <h2>
-<a id="screenshot" class="anchor" href="#screenshot" aria-hidden="true"><span class="octicon octicon-link"></span></a>Screenshot</h2>
+<a id="screenshots" class="anchor" href="#screenshots" aria-hidden="true"><span class="octicon octicon-link"></span></a>Screenshots</h2>
 
-<p><img src="gui.png" alt="screenshot filled gui">
+<p><img src="gui1.png" alt="screenshot new gui">
+<img src="gui.png" alt="screenshot filled gui">
 <img src="plot.png" alt="screenshot new plot"></p>
+
+<h2>
+<a id="concepts-demonstrated" class="anchor" href="#concepts-demonstrated" aria-hidden="true"><span class="octicon octicon-link"></span></a>Concepts Demonstrated</h2>
+
+<p>Identify the OPL concepts demonstrated in your project. Be brief. A simple list and example is sufficient. </p>
+
+<ul>
+<li>
+<strong>Data abstraction</strong> is used to provide access to the elements of the RSS feed.</li>
+<li>The objects in the OpenGL world are represented with <strong>recursive data structures.</strong>
+</li>
+<li>
+<strong>Symbolic language processing techniques</strong> are used in the parser.</li>
+</ul>
+
+<h2>
+<a id="external-technology-and-libraries" class="anchor" href="#external-technology-and-libraries" aria-hidden="true"><span class="octicon octicon-link"></span></a>External Technology and Libraries</h2>
+
+<p>Briefly describe the existing technology you utilized, and how you used it. Provide a link to that technology(ies).</p>
+
+<h2>
+<a id="favorite-lines-of-code" class="anchor" href="#favorite-lines-of-code" aria-hidden="true"><span class="octicon octicon-link"></span></a>Favorite Lines of Code</h2>
+
+<h4>
+<a id="mark-a-team-member" class="anchor" href="#mark-a-team-member" aria-hidden="true"><span class="octicon octicon-link"></span></a>Mark (a team member)</h4>
+
+<p>Each team member should identify a favorite line of code, expression, or procedure written by them, and explain what it does. Why is it your favorite? What OPL philosophy does it embody?
+Remember code looks something like this:</p>
+
+<div class="highlight highlight-scheme"><pre>(<span class="pl-c1">map</span> (<span class="pl-k">lambda</span> (<span class="pl-v">x</span>) (foldr compose functions)) data)</pre></div>
+
+<h4>
+<a id="lillian-another-team-member" class="anchor" href="#lillian-another-team-member" aria-hidden="true"><span class="octicon octicon-link"></span></a>Lillian (another team member)</h4>
+
+<p>This expression reads in a regular expression and elegantly matches it against a pre-existing hashmap....</p>
+
+<div class="highlight highlight-scheme"><pre>(<span class="pl-k">let*</span> ((expr (convert-to-regexp (read-line my-in-port)))
+             (matches (flatten
+                       (hash-map *words*
+                                 (<span class="pl-k">lambda</span> (<span class="pl-v">key value</span>)
+                                   (<span class="pl-k">if</span> (regexp-match expr key) key <span class="pl-c1">'()</span>))))))
+  matches)</pre></div>
+
+<h2>
+<a id="additional-remarks" class="anchor" href="#additional-remarks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Additional Remarks</h2>
+
+<p>Anything else you want to say in your report. Can rename or remove this section.</p>
+
+<h1>
+<a id="how-to-download-and-run" class="anchor" href="#how-to-download-and-run" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to Download and Run</h1>
+
+<p>You may want to link to your latest release for easy downloading by people (such as Mark).</p>
+
+<p>Include what file to run, what to do with that file, how to interact with the app when its running, etc. </p>
 
 <h3>
 <a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
