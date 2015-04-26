@@ -1,23 +1,21 @@
-# GrEP
-Dual-Core Processor's OPLS15 Project.
-
-# FP7-webpage Title of Project
-This is a template for using your repo's README.md as your project web page. 
-I recommend you copy and paste into your README file. Delete this line and the one above it, customize everything else. Make it look good!
-
 ##Authors
-Person One
+Our team, Dual-Core Processors, consists of Michael Forsyth, Nicholas Forsyth, and Emily Seto.
 
-Person Two
 
 ##Overview
-A brief description of the project is given here.  The description is 1 to 3 sentences long.  Be concise and clear.
+In our earlier discussions, we began thinking about how there needs to be a simpler way for individuals with non-technical backgrounds to utilize the capabilities of plotting mathematical functions. Our software will provide this solution.
 
-##Screenshot
-(insert a screenshot here. You may opt to get rid of the title for it. You need at least one screenshot. Make it actually appear here, don't just add a link.)
 
-Here's a demonstration of how to display an image that's uploaded to this repo:
-![screenshot showing env diagram](withdraw.png)
+##Screenshots
+![screenshot new gui](gui1.png)
+>This is how the **gui frame** first looks when the software starts up.
+
+![screenshot filled gui](gui.png)
+>This is how the same window looks after inputting lower and upper bounds for the x-, y-coordinates on a Cartesian plane. **Note that this particular part is still in development.** For now, all function inputs must be written in the form of a **lambda**, as shown above.
+
+![screenshot new plot](plot.png)
+>This is the new plot created with the given user input.
+
 
 ##Concepts Demonstrated
 Identify the OPL concepts demonstrated in your project. Be brief. A simple list and example is sufficient. 
@@ -25,73 +23,30 @@ Identify the OPL concepts demonstrated in your project. Be brief. A simple list 
 * The objects in the OpenGL world are represented with **recursive data structures.**
 * **Symbolic language processing techniques** are used in the parser.
 
+
 ##External Technology and Libraries
-Briefly describe the existing technology you utilized, and how you used it. Provide a link to that technology(ies).
+For this project, we used the following libraries:
+* **racket/gui/base** (http://docs.racket-lang.org/gui/)
+* **plot** (http://docs.racket-lang.org/plot/)
+
+Racket's **gui** library provides the classes and procedures that allowed us to create a graphical user interface. Our team used **gui** to create a new frame (a window), a horizontal panel within that frame, and used a few different widgets to attain user input (such as the button and text-field widgets). 
+
+
+The **plot** library allows us to produce any plot (or graph) we desire. From the user input we ascertained from **gui**, our team was able to plot that information to create graphs desired by the user.
+
 
 ##Favorite Lines of Code
-####Mark (a team member)
+####Michael Forsyth (@mike01720)
 Each team member should identify a favorite line of code, expression, or procedure written by them, and explain what it does. Why is it your favorite? What OPL philosophy does it embody?
 Remember code looks something like this:
 ```scheme
 (map (lambda (x) (foldr compose functions)) data)
 ```
-####Lillian (another team member)
+
+
+####Nicholas Forsyth (@nick01720)
 This expression reads in a regular expression and elegantly matches it against a pre-existing hashmap....
 ```scheme
-=======
-Authors
-
-Michael Forsyth
-
-Nicholas Forsyth
-
-Emily Seto
-
-
-
-Overview
-
-This project creates a GUI that will display a given function.
-
-
-
-Screenshot
-
-(insert a screenshot here. You may opt to get rid of the title for it. You need at least one screenshot. Make it actually appear here, don't just add a link.)
-
-Here's a demonstration of how to display an image that's uploaded to this repo: screenshot showing env diagram
-
-
-
-Concepts Demonstrated
-
-Identify the OPL concepts demonstrated in your project. Be brief. A simple list and example is sufficient.
-
-Using smaller procedures to accomplish bigger tasks. 
-
-Data abstraction is used to provide access to the elements of the RSS feed.
-The objects in the OpenGL world are represented with recursive data structures.
-Symbolic language processing techniques are used in the parser.
-External Technology and Libraries
-
-
-
-Briefly describe the existing technology you utilized, and how you used it. Provide a link to that technology(ies).
-
-
-
-Favorite Lines of Code
-
-Mark (a team member)
-
-Each team member should identify a favorite line of code, expression, or procedure written by them, and explain what it does. Why is it your favorite? What OPL philosophy does it embody? Remember code looks something like this:
-
-(map (lambda (x) (foldr compose functions)) data)
-Lillian (another team member)
-
-This expression reads in a regular expression and elegantly matches it against a pre-existing hashmap....
-
->>>>>>> upstream/master
 (let* ((expr (convert-to-regexp (read-line my-in-port)))
              (matches (flatten
                        (hash-map *words*
@@ -100,27 +55,15 @@ This expression reads in a regular expression and elegantly matches it against a
   matches)
 ```
 
-##Additional Remarks
-Anything else you want to say in your report. Can rename or remove this section.
+
+####Emily Seto (@svnaptic)
+Write something here.
+
 
 #How to Download and Run
-You may want to link to your latest release for easy downloading by people (such as Mark).
+There are links at the top of this webpage for downloading this program.
+* Download .zip (https://github.com/oplS15projects/GrEP/zipball/master)
+* Download .tar.gz (https://github.com/oplS15projects/GrEP/tarball/master)
 
-Include what file to run, what to do with that file, how to interact with the app when its running, etc. 
+Depending on which version you download, unzip or untar your download. There should be *gui.rkt* and *plot.rkt*. At this point in time, all of our usable code is in **plot.rkt**. Run that file in Dr. Racket, and a *gui window* should pop-up. Enter any mathematical function in pre-fix notation, all of it wrapped up in a nice little lambda, and fill out the consequent text-fields to your preference. Hit **enter**, and a new plot should appear!
 
-=======
-Additional Remarks
-
-Anything else you want to say in your report. Can rename or remove this section.
-
-
-
-How to Download and Run
-You may want to link to your latest release for easy downloading by people (such as Mark).
-
-
-
-Include what file to run, what to do with that file, how to interact with the app when its running, etc.
-
-How to use this:
->>>>>>> upstream/master
