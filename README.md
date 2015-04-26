@@ -68,5 +68,5 @@ There are links at the top of this webpage for downloading this program.
 Depending on which version you download, unzip or untar your download. There should be *gui.rkt* and *plot.rkt*. At this point in time, all of our usable code is in **plot.rkt**. Run that file in Dr. Racket, and a *gui window* should pop-up. Enter any mathematical function in pre-fix notation, all of it wrapped up in a nice little lambda, and fill out the consequent text-fields to your preference. Hit **enter**, and a new plot should appear!
 
 
-Currently, our current release is Milestone 2 (https://github.com/oplS15projects/GrEP/releases/tag/Milestone2).
+Currently, our latest release is Milestone 2: (https://github.com/oplS15projects/GrEP/releases/tag/Milestone2).
 
