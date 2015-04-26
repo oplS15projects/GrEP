@@ -1,7 +1,6 @@
 # GrEP
 Dual-Core Processor's OPLS15 Project.
 
-<<<<<<< HEAD
 # FP7-webpage Title of Project
 This is a template for using your repo's README.md as your project web page. 
 I recommend you copy and paste into your README file. Delete this line and the one above it, customize everything else. Make it look good!
@@ -99,7 +98,6 @@ This expression reads in a regular expression and elegantly matches it against a
                                  (lambda (key value)
                                    (if (regexp-match expr key) key '()))))))
   matches)
-<<<<<<< HEAD
 ```
 
 ##Additional Remarks
