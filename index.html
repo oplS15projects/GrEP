@@ -53,13 +53,20 @@
 <h2>
 <a id="external-technology-and-libraries" class="anchor" href="#external-technology-and-libraries" aria-hidden="true"><span class="octicon octicon-link"></span></a>External Technology and Libraries</h2>
 
-<p>Briefly describe the existing technology you utilized, and how you used it. Provide a link to that technology(ies).</p>
+<p>For this project, we used the following libraries:</p>
+
+<ul>
+<li>racket/gui/base (<a href="http://docs.racket-lang.org/gui/">http://docs.racket-lang.org/gui/</a>)</li>
+<li>plot (<a href="http://docs.racket-lang.org/plot/">http://docs.racket-lang.org/plot/</a>)</li>
+</ul>
+
+<p>Racket's racket/gui library provides the classes and procedures that allowed us to create a graphical user interface. Our team used racket/gui to create a new frame (a window), a horizontal panel within that frame, and used a few different widgets to attain user input (such as the button and text-field widgets). The plot library allows us to produce any plot (or graph) we desire. From the user input we ascertained from racket/gui, our team was able to plot that information to create graphs desired by the user.</p>
 
 <h2>
 <a id="favorite-lines-of-code" class="anchor" href="#favorite-lines-of-code" aria-hidden="true"><span class="octicon octicon-link"></span></a>Favorite Lines of Code</h2>
 
 <h4>
-<a id="mark-a-team-member" class="anchor" href="#mark-a-team-member" aria-hidden="true"><span class="octicon octicon-link"></span></a>Mark (a team member)</h4>
+<a id="michael-forsyth-mike01720" class="anchor" href="#michael-forsyth-mike01720" aria-hidden="true"><span class="octicon octicon-link"></span></a>Michael Forsyth (mike01720)</h4>
 
 <p>Each team member should identify a favorite line of code, expression, or procedure written by them, and explain what it does. Why is it your favorite? What OPL philosophy does it embody?
 Remember code looks something like this:</p>
@@ -67,7 +74,7 @@ Remember code looks something like this:</p>
 <div class="highlight highlight-scheme"><pre>(<span class="pl-c1">map</span> (<span class="pl-k">lambda</span> (<span class="pl-v">x</span>) (foldr compose functions)) data)</pre></div>
 
 <h4>
-<a id="lillian-another-team-member" class="anchor" href="#lillian-another-team-member" aria-hidden="true"><span class="octicon octicon-link"></span></a>Lillian (another team member)</h4>
+<a id="nicholas-forsyth-nick01720" class="anchor" href="#nicholas-forsyth-nick01720" aria-hidden="true"><span class="octicon octicon-link"></span></a>Nicholas Forsyth (nick01720)</h4>
 
 <p>This expression reads in a regular expression and elegantly matches it against a pre-existing hashmap....</p>
 
@@ -77,6 +84,11 @@ Remember code looks something like this:</p>
                                  (<span class="pl-k">lambda</span> (<span class="pl-v">key value</span>)
                                    (<span class="pl-k">if</span> (regexp-match expr key) key <span class="pl-c1">'()</span>))))))
   matches)</pre></div>
+
+<h4>
+<a id="emily-seto-svnaptic" class="anchor" href="#emily-seto-svnaptic" aria-hidden="true"><span class="octicon octicon-link"></span></a>Emily Seto (svnaptic)</h4>
+
+<p>Write something here.</p>
 
 <h2>
 <a id="additional-remarks" class="anchor" href="#additional-remarks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Additional Remarks</h2>
