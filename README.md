@@ -16,12 +16,17 @@ In our earlier discussions, we began thinking about how there needs to be a simp
 ![screenshot new plot](plot.png)
 >This is the new plot created with the given user input.
 
+*Note:* The gui will appear different depending on operating systems.
+
+
 
 ##Concepts Demonstrated
+* 
 Identify the OPL concepts demonstrated in your project. Be brief. A simple list and example is sufficient. 
-* **Data abstraction** is used to provide access to the elements of the RSS feed.
-* The objects in the OpenGL world are represented with **recursive data structures.**
-* **Symbolic language processing techniques** are used in the parser.
+* Our use of racket/gui included ** object-orientation ** when we designed the frame and panels.
+* ** Data abstraction ** is used to ascertain user input from the gui.
+* The concept of ** higher-order procedures ** is represented by the simpler procedures written in our software.
+* ** Symbol manipulation ** ties in with our data abstraction, by using *eval*.
 
 
 ##External Technology and Libraries
@@ -37,27 +42,40 @@ The **plot** library allows us to produce any plot (or graph) we desire. From th
 
 ##Favorite Lines of Code
 ####Michael Forsyth (@mike01720)
-Each team member should identify a favorite line of code, expression, or procedure written by them, and explain what it does. Why is it your favorite? What OPL philosophy does it embody?
-Remember code looks something like this:
+My favorite line is the eval read... that I used to read in the input. I like it because it utilizes a bunch of procedures that result in the expected net result. This follows the theory of functional code to let smaller procedures do the work for you.
+
 ```scheme
-(map (lambda (x) (foldr compose functions)) data)
+(function (eval (read (open-input-string (send i-func1 get-value)))) #:color 0 #:style 'dot)
 ```
 
 
 ####Nicholas Forsyth (@nick01720)
-This expression reads in a regular expression and elegantly matches it against a pre-existing hashmap....
+I would say my favorite line of code would be the initial creation of the window frame that creates a sandbox area for gui. From that one line, the gui framework is started and anything can be created from it. It's a simple building block that sets the foundation for many more.
+
 ```scheme
-(let* ((expr (convert-to-regexp (read-line my-in-port)))
-             (matches (flatten
-                       (hash-map *words*
-                                 (lambda (key value)
-                                   (if (regexp-match expr key) key '()))))))
-  matches)
+(define frame (new frame%
+                   [label "Graphic-al Emulation Program (GrEP)"]
+                   [height 150]
+                   [width 350]))
 ```
 
 
 ####Emily Seto (@svnaptic)
-Write something here.
+My favorite lines of code are the ones that capture the values inputted at the text-fields (by defining them), and using those new bindings as parameters to other procedures. This exemplifies the concepts of creating simple functions and abstracting immutable data in higher-order procedures.
+
+```scheme
+             (define xmin (send i-xmin get-value))
+             (define xmax (send i-xmax get-value))
+             (define ymin (send i-ymin get-value))
+             (define ymax (send i-ymax get-value))
+             
+             
+             (eval (read (open-input-string xmin))) 
+             (eval (read (open-input-string xmax)))) 
+             ...
+             (eval (read (open-input-string ymin))) 
+             (eval (read (open-input-string ymax)))
+```
 
 
 #How to Download and Run
@@ -68,5 +86,5 @@ There are links at the top of this webpage for downloading this program.
 Depending on which version you download, unzip or untar your download. There should be *gui.rkt* and *plot.rkt*. At this point in time, all of our usable code is in **plot.rkt**. Run that file in Dr. Racket, and a *gui window* should pop-up. Enter any mathematical function in pre-fix notation, all of it wrapped up in a nice little lambda, and fill out the consequent text-fields to your preference. Hit **enter**, and a new plot should appear!
 
 
-Currently, our latest release is Milestone 2: (https://github.com/oplS15projects/GrEP/releases/tag/Milestone2).
+Currently, our latest release is Milestone 2: (https://github.com/oplS15projects/GrEP/releases/tag/Milestone2)
 
