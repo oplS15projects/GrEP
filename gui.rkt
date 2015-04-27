@@ -28,12 +28,12 @@
 ;Create function input text-fields:
 (define i-func1 (new text-field% 
                      [label "Enter function here: "]
-                     [parent frame];))
-                     [init-value "(lambda(x) (* x x))"]))
+                     [parent frame]))
+                     ;[init-value "(lambda(x) (* x x))"]))
 (define i-func2 (new text-field% 
                      [label "Enter second function here: "]
-                     [parent frame];))
-                     [init-value "(lambda(x) (x))"]))
+                     [parent frame]))
+                     ;[init-value "(lambda(x) (x))"]))
 
 ;Create min and max text-fields for bounds of Cartesian plane:
 (define i-xmin (new text-field%
