@@ -1,54 +1,10 @@
 #lang racket
 
-(require racket/gui/base)
-;(require racket/include)
 (require plot)
+(require racket/gui/base)
 (require web-server/formlets)
 
-;Make a new frame by instantiating the frame% class.
-(define frame (new frame%
-                   [label "Graphic-al Emulation Program (GrEP)"]
-                   [height 150]
-                   [width 350]))
-                   ;[style 'fullscreen-button]))
-
-;Create a static default message in the frame.
-(define msg (new message% [parent frame] [label "STATUS MESSAGE: Testing in progress..."]))
-
-;Define a menu bar (for funsies!):
-(define menu-bar (new menu-bar% [parent frame]))
-(new menu% [label "&File"] [parent menu-bar])
-(new menu% [label "&Edit"] [parent menu-bar])
-(new menu% [label "&Help"] [parent menu-bar])
-
-;Define a new horizontal panel.
-(define panel (new horizontal-panel% 
-                   [parent frame]
-                   [alignment '(center center)]))
-
-;Create function input text-fields:
-(define i-func1 (new text-field% 
-                     [label "Enter function here: "]
-                     [parent frame]
-                     [init-value "(lambda(x) (* x x))"]))
-(define i-func2 (new text-field% 
-                     [label "Enter second function here: "]
-                     [parent frame]
-                     [init-value "(lambda(x) (x))"]))
-
-;Create min and max text-fields for bounds of Cartesian plane:
-(define i-xmin (new text-field%
-                    [label "x-min: "]
-                    [parent panel]))
-(define i-xmax (new text-field%
-                    [label "x-max: "]
-                    [parent panel]))
-(define i-ymin (new text-field%
-                    [label "y-min: "]
-                    [parent panel]))
-(define i-ymax (new text-field%
-                    [label "y-max: "]
-                    [parent panel]))
+(require "gui.rkt")
 
 ;func1 is going to be the text in the textbox.
 ;Adjust func1 using a set! procedure.
@@ -77,11 +33,11 @@
                  (plot (list (axes)
                              ;(function (lambda (x) (0)) -2 2)
                              (function (λ(x) (0)) 
-                                       (eval (read (open-input-string (send i-xmin get-value)))) 
-                                       (eval (read (open-input-string (send i-xmax get-value))))) 
+                                       (eval (read (open-input-string xmin))) 
+                                       (eval (read (open-input-string xmax)))) 
                              (function n-func
-                                       (eval (read (open-input-string (send i-ymin get-value)))) 
-                                       (eval (read (open-input-string (send i-ymax get-value))))
+                                       (eval (read (open-input-string ymin))) 
+                                       (eval (read (open-input-string ymax)))
                                        #:color 5)
                              (function (eval (read (open-input-string (send i-func1 get-value)))) #:color 0 #:style 'dot)
                              (function (eval (read (open-input-string (send i-func2 get-value)))) #:color 0 #:style 'dot)))
