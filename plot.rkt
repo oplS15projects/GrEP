@@ -13,7 +13,7 @@
 ;func2 is a regular function plot with it.
 ;This is a case to compare.
 (define func2(λ(x) (* -2 x)))
-(define n-func (lambda (x) (* 2 x)))
+(define n-func (lambda (x) 0))
 
 ;Creates a button in the frame.
 (new button% [parent frame]
@@ -32,15 +32,13 @@
                 ;(let* ([
                  (plot (list (axes)
                              ;(function (lambda (x) (0)) -2 2)
-                             (function (λ(x) (0)) 
-                                       (eval (read (open-input-string xmin))) 
-                                       (eval (read (open-input-string xmax)))) 
-                             (function n-func
-                                       (eval (read (open-input-string ymin))) 
-                                       (eval (read (open-input-string ymax)))
-                                       #:color 5)
-                             (function (eval (read (open-input-string (send i-func1 get-value)))) #:color 0 #:style 'dot)
-                             (function (eval (read (open-input-string (send i-func2 get-value)))) #:color 0 #:style 'dot)))
+                             (function (eval (read (open-input-string (send i-func1 get-value)))) #:label (send i-func1 get-value) #:color 2)
+                             (function (eval (read (open-input-string (send i-func2 get-value)))) #:label (send i-func2 get-value) #:color 5))
+                        #:x-min (eval (read (open-input-string xmin)))
+                        #:x-max (eval (read (open-input-string xmax)))
+                        #:y-min (eval (read (open-input-string ymin))) 
+                        #:y-max (eval (read (open-input-string ymax)))
+                        )
                  (send frame show #t)
                  (send msg set-label "STATUS MESSAGE: Updated"))])
 
