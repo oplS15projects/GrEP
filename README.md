@@ -21,8 +21,6 @@ In our earlier discussions, we began thinking about how there needs to be a simp
 
 
 ##Concepts Demonstrated
-* 
-Identify the OPL concepts demonstrated in your project. Be brief. A simple list and example is sufficient. 
 * Our use of racket/gui included **object-orientation** when we designed the frame and panels.
 * **Data abstraction** is used to ascertain user input from the gui.
 * The concept of **higher-order procedures** is represented by the simpler procedures written in our software.
@@ -54,9 +52,9 @@ I would say my favorite line of code would be the initial creation of the window
 
 ```scheme
 (define frame (new frame%
-                   [label "Graphic-al Emulation Program (GrEP)"]
-                   [height 150]
-                   [width 350]))
+                   (label "Graphic-al Emulation Program (GrEP)")
+                   (height 150)
+                   (width 350)))
 ```
 
 
@@ -71,7 +69,7 @@ My favorite lines of code are the ones that capture the values inputted at the t
              
              
              (eval (read (open-input-string xmin))) 
-             (eval (read (open-input-string xmax)))) 
+             (eval (read (open-input-string xmax))) 
              ...
              (eval (read (open-input-string ymin))) 
              (eval (read (open-input-string ymax)))
