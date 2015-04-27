@@ -81,6 +81,7 @@ There are links at the top of this webpage for downloading this program.
 * Download .zip (https://github.com/oplS15projects/GrEP/zipball/master)
 * Download .tar.gz (https://github.com/oplS15projects/GrEP/tarball/master)
 
+
 Depending on which version you download, unzip or untar your download. There should be *gui.rkt* and *plot.rkt*. While you can view both files to gain a better understanding of how our program works, opening **plot.rkt** should suffice when interacting with it. Run that file in Dr. Racket, and a *gui window* should pop-up. Enter any mathematical function in pre-fix notation, all of it wrapped up in a nice little lambda, and fill out the consequent text-fields to your preference. Hit **enter**, and a new plot should appear!
 
 
