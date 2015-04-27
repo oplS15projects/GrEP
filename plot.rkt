@@ -15,6 +15,12 @@
 (define func2(λ(x) (* -2 x)))
 (define n-func (lambda (x) 0))
 
+;Default values for min and max of x and y
+(define minx -10)
+(define miny -10)
+(define maxx 10)
+(define maxy 10)
+
 ;Creates a button in the frame.
 (new button% [parent frame]
      [label "Update!"]
@@ -32,8 +38,10 @@
                 ;(let* ([
                  (plot (list (axes)
                              ;(function (lambda (x) (0)) -2 2)
-                             (function (eval (read (open-input-string (send i-func1 get-value)))) #:label (send i-func1 get-value) #:color 2)
-                             (function (eval (read (open-input-string (send i-func2 get-value)))) #:label (send i-func2 get-value) #:color 5))
+                             (function (eval (read (open-input-string (send i-func1 get-value)))) #:label (send i-func1 get-value) 
+                                       #:color (read (open-input-string(send i-xcolor get-value))))
+                             (function (eval (read (open-input-string (send i-func2 get-value)))) #:label (send i-func2 get-value) 
+                                       #:color (read (open-input-string(send i-ycolor get-value)))))
                         #:x-min (eval (read (open-input-string xmin)))
                         #:x-max (eval (read (open-input-string xmax)))
                         #:y-min (eval (read (open-input-string ymin))) 
