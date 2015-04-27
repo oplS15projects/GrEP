@@ -23,10 +23,10 @@ In our earlier discussions, we began thinking about how there needs to be a simp
 ##Concepts Demonstrated
 * 
 Identify the OPL concepts demonstrated in your project. Be brief. A simple list and example is sufficient. 
-* Our use of racket/gui included ** object-orientation ** when we designed the frame and panels.
-* ** Data abstraction ** is used to ascertain user input from the gui.
-* The concept of ** higher-order procedures ** is represented by the simpler procedures written in our software.
-* ** Symbol manipulation ** ties in with our data abstraction, by using *eval*.
+* Our use of racket/gui included **object-orientation** when we designed the frame and panels.
+* **Data abstraction** is used to ascertain user input from the gui.
+* The concept of **higher-order procedures** is represented by the simpler procedures written in our software.
+* **Symbol manipulation** ties in with our data abstraction, by using *eval*.
 
 
 ##External Technology and Libraries
