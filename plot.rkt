@@ -21,6 +21,12 @@
 (define maxx 10)
 (define maxy 10)
 
+;Added this for the 3D.
+(define i-func3 (new text-field% 
+                     [label "Enter 3D function here: "]
+                     [parent frame]
+                     [init-value "(lambda(x y) (+ x y))"]))
+
 ;Creates a button in the frame.
 (new button% [parent frame]
      [label "Update!"]
@@ -47,6 +53,12 @@
                         #:y-min (eval (read (open-input-string ymin))) 
                         #:y-max (eval (read (open-input-string ymax)))
                         )
+                 (parameterize ([plot-title  "TEST 3D"]
+                                [plot-x-label "x"]
+                                [plot-y-label "y"]
+                                [plot-z-label "cos(x) sin(y)"])
+                   (plot3d (contour-intervals3d (eval (read (open-input-string (send i-func3 get-value))))
+                                                (- pi) pi (- pi) pi)))
                  (send frame show #t)
                  (send msg set-label "STATUS MESSAGE: Updated"))])
 
