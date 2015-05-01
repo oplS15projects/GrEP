@@ -87,3 +87,5 @@ Depending on which version you download, unzip or untar your download. There sho
 
 Currently, our latest release is Milestone 2: (https://github.com/oplS15projects/GrEP/releases/tag/Milestone2)
 
+
+Our website is: (http://opls15projects.github.io/GrEP/)
