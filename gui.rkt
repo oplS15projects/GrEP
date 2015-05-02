@@ -8,7 +8,9 @@
 (define frame (new frame%
                    [label "Graphic-al Emulation Program (GrEP)"]
                    [height 205]
-                   [width 545]))
+                   [width 720]
+                   [stretchable-height #f]
+                   [stretchable-width #t]))
                    ;[style 'fullscreen-button]))
 
 ;Create a static default message in the frame.
@@ -76,11 +78,13 @@
 (define i-func1 (new text-field% 
                      [label "Enter 1st function here: "]
                      [parent panel-5]
-                     [init-value "(lambda(x) (* x x))"]))
+                     [init-value "(lambda(x) (* x x))"]
+                     [min-width 100]))
 (define i-color1 (new text-field%
                     [label "Color: "]
                     [parent panel-5]
-                    [init-value "1"]))
+                    ;[init-value "1"]
+                    [stretchable-width #f]))
 (define func1-cb (new check-box%
                       (parent panel-5)
                       (label "Use")
@@ -90,11 +94,13 @@
 (define i-func2 (new text-field% 
                      [label "Enter 2nd function here: "]
                      [parent panel-6]
-                     [init-value "(lambda(x) x)"]))
+                     [init-value "(lambda(x) x)"]
+                     [min-width 100]))
 (define i-color2 (new text-field%
                     [label "Color: "]
                     [parent panel-6]
-                    [init-value "2"]))
+                    ;[init-value "2"]
+                    [stretchable-width #f]))
 (define func2-cb (new check-box%
                       (parent panel-6)
                       (label "Use")
@@ -102,12 +108,14 @@
 
 (define i-func4 (new text-field% 
                      [label "Enter 3rd function here: "]
-                     [parent panel-7]))
+                     [parent panel-7]
+                     [min-width 100]))
                      ;[init-value "(lambda(x) x)"]))
 (define i-color4 (new text-field%
                     [label "Color: "]
                     [parent panel-7]
-                    [init-value "2"]))
+                   ;[init-value "2"]))
+                    [stretchable-width #f]))
 (define func4-cb (new check-box%
                       (parent panel-7)
                       (label "Use")
@@ -115,11 +123,13 @@
 
 (define i-func5 (new text-field% 
                      [label "Enter 4th function here: "]
-                     [parent panel-8]))
+                     [parent panel-8]
+                     [min-width 100]))
 (define i-color5 (new text-field%
                     [label "Color: "]
                     [parent panel-8]
-                    [init-value "2"]))
+                    ;[init-value "2"]
+                    [stretchable-width #f]))
 (define func5-cb (new check-box%
                       (parent panel-8)
                       (label "Use")
@@ -127,11 +137,13 @@
 
 (define i-func6 (new text-field% 
                      [label "Enter 5th function here: "]
-                     [parent panel-9]))
+                     [parent panel-9]
+                     [min-width 100]))
 (define i-color6 (new text-field%
                     [label "Color: "]
                     [parent panel-9]
-                    [init-value "2"]))
+                    ;[init-value "2"]
+                    [stretchable-width #f]))
 (define func6-cb (new check-box%
                       (parent panel-9)
                       (label "Use")
