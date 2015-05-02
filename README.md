@@ -10,7 +10,18 @@ Our team, Dual-Core Processors, consists of Michael Forsyth, Nicholas Forsyth, a
 In our earlier discussions, we began thinking about how there needs to be a simpler way for individuals with non-technical backgrounds to utilize the capabilities of plotting mathematical functions. Our software will provide this solution.
 
 
-##Screenshots
+##Screenshots (Updated May 2nd, 2015)
+![screenshot new int](init.png)
+>This is what the new initial window set-up looks like. There's a gui window for user input, now with check-boxes, colors for each individually used input functions, and the ability to graph 3D functions.
+
+![screenshot new unchecked](unchecked.png)
+>This is what the input functions look like when some check-boxes are checked.
+
+![screenshot new checked](checked.png)
+>This is what the input functions look like when the necessary check-boxes (with user input) are checked. 
+
+
+##Screenshots (Updated April 26th, 2015)
 ![screenshot new gui](gui1.png)
 >This is how the **gui frame** first looks when the software starts up.
 
