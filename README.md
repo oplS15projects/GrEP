@@ -1,3 +1,6 @@
+## Website Link:
+Our website is here: (http://opls15projects.github.io/GrEP/)
+
 ##Authors
 Our team, Dual-Core Processors, consists of Michael Forsyth, Nicholas Forsyth, and Emily Seto.
 
@@ -86,6 +89,3 @@ Depending on which version you download, unzip or untar your download. There sho
 
 
 Currently, our latest release is Milestone 2: (https://github.com/oplS15projects/GrEP/releases/tag/Milestone2)
-
-
-Our website is here: (http://opls15projects.github.io/GrEP/)
