@@ -83,7 +83,7 @@
 (define i-color1 (new text-field%
                     [label "Color: "]
                     [parent panel-5]
-                    ;[init-value "1"]
+                    [init-value "1"]
                     [stretchable-width #f]))
 (define func1-cb (new check-box%
                       (parent panel-5)
@@ -99,7 +99,7 @@
 (define i-color2 (new text-field%
                     [label "Color: "]
                     [parent panel-6]
-                    ;[init-value "2"]
+                    [init-value "3"]
                     [stretchable-width #f]))
 (define func2-cb (new check-box%
                       (parent panel-6)
@@ -109,12 +109,13 @@
 (define i-func4 (new text-field% 
                      [label "Enter 3rd function here: "]
                      [parent panel-7]
+                     [init-value "(lambda(x) (sin x))"]
                      [min-width 100]))
                      ;[init-value "(lambda(x) x)"]))
 (define i-color4 (new text-field%
                     [label "Color: "]
                     [parent panel-7]
-                   ;[init-value "2"]))
+                    [init-value "5"]
                     [stretchable-width #f]))
 (define func4-cb (new check-box%
                       (parent panel-7)
@@ -124,11 +125,12 @@
 (define i-func5 (new text-field% 
                      [label "Enter 4th function here: "]
                      [parent panel-8]
+                     [init-value "(lambda(x) (/(tan x) x))"]
                      [min-width 100]))
 (define i-color5 (new text-field%
                     [label "Color: "]
                     [parent panel-8]
-                    ;[init-value "2"]
+                    [init-value "4"]
                     [stretchable-width #f]))
 (define func5-cb (new check-box%
                       (parent panel-8)
@@ -138,11 +140,12 @@
 (define i-func6 (new text-field% 
                      [label "Enter 5th function here: "]
                      [parent panel-9]
+                     [init-value "(lambda(x) (* x x x))"]
                      [min-width 100]))
 (define i-color6 (new text-field%
                     [label "Color: "]
                     [parent panel-9]
-                    ;[init-value "2"]
+                    [init-value "6"]
                     [stretchable-width #f]))
 (define func6-cb (new check-box%
                       (parent panel-9)
